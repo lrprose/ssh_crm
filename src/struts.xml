@@ -24,5 +24,14 @@
 				<result name="toHome" type="redirect">/index.htm</result>
 				<result name="error">/login.jsp</result>
 			</action>
+			<action name="CustomerAction_*" class="customerAction" method="{1}">
+				<result name="list">/jsp/customer/list.jsp</result>
+				<result name="edit">/jsp/customer/add.jsp</result>
+				<result name="toList" type="redirectAction">
+					<param name="namespace">/</param>
+					<param name="actionName">CustomerAction_list</param>
+				</result>
+			</action>
+			<action name="BaseDictAction_*" class="baseDictAction" method="execute"></action>
 		</package>
 	</struts>

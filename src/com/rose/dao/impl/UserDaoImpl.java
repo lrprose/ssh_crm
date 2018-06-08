@@ -16,7 +16,7 @@ import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import com.rose.dao.UserDao;
 import com.rose.domain.User;
 
-public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
+public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 
 	@Override
 	public User getUserByCode(final String usercode) {
@@ -49,10 +49,10 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		}
 		*/
 	
-	@Override
+	/*@Override
 	public void save(User u) {
 		getHibernateTemplate().save(u);
 		
 	}
-
+*/
 }
